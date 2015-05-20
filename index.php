@@ -24,7 +24,7 @@ else {}?>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Dacotrans</title>
+    <title>-Dacotrans-</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
