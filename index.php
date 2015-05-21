@@ -60,9 +60,13 @@ else {}?>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+<<<<<<< HEAD
           <a class="navbar-brand" href="#">DACOTRANS</a> 
           <!--<li class="dropdown">
               <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">DACOTRANS <span class="caret"></span></a>-->
+=======
+          <a class="navbar-brand" href="#">DACOTRAN S dads</a>
+>>>>>>> d293923836c74ed71c7867e766e6332cf71adeb5
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
