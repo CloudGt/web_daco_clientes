@@ -51,33 +51,43 @@ else {}?>
    <body role="document">
 
     <!-- Fixed navbar -->
-   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">DACOTRANS</a>
+          <a class="navbar-brand" href="#">DACOTRANS</a> 
+          <!--<li class="dropdown">
+              <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">DACOTRANS <span class="caret"></span></a>-->
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">inicio</a></li>
-            <li><a href="#about">Servicios</a></li>
+            <li class="dropdown">
+            <li><a href="#contact">Servicios</a></li>
             <li><a href="#contact">Contacto</a></li>
             <li><a href="#contact">Localicenos</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Idioma <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Inglés</a></li>
-                <li><a href="#">Aleman</a></li>
-                <li class="divider"></li>
-              </ul>
-            </li>
-          </ul>
+            <li class="dropdown"> 
+               <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Empresas<span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                   <li><a href="#">Intcomex de Guatemala, S.A. </a></li>
+                   <li><a href="#">Artemis Edinter, S.A.</a></li> 
+               </ul>
+              <li class="dropdown">  
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Idioma <span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                   <li><a href="#">Español</a></li>
+                   <li><a href="#">Inglés</a></li>
+                   <li><a href="#">Aleman</a></li>
+                </ul>
+              </li>
+            </li>   
+          </ul>  
           <ul class="nav navbar-nav navbar-right">
             <?php   echo '<li data-toggle="tooltip" data-placement="bottom" data-original-title="Usuario:  - '.  $_SESSION['nombre_usuario'] . '" ><a href="#"><span class="glyphicon glyphicon-user"  ></span> Perfil</a></li>' ?> 
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
@@ -110,13 +120,13 @@ else {}?>
       <div class="container"> 
          <div class="row">
              <div class="col-sm-4">     
-                  <img src="assets/img/EC.jpg" class="img-circle" alt="" width="304" height="236">
+                  <img src="assets/img/EC.jpg"class="img-circle" alt="cinque terre" width="230" height="230">
              </div>
              <div class="col-sm-4">     
-                  <img src="assets/img/Cotizador.jpg" class="img-circle" alt="" width="304" height="236"> 
+                  <img src="assets/img/Cotizador.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
              </div> 
              <div class="col-sm-4">     
-                  <img src="assets/img/Datos.jpg" class="img-circle" alt="" width="304" height="236"> 
+                  <img src="assets/img/Datos.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
              </div>  
       </div>
         
