@@ -61,7 +61,7 @@ else {}?>
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">DACOTRAN S dads</a>
+          <a class="navbar-brand" href="#">DACOTRANS</a>
 
           <a class="navbar-brand" href="#">DACOTRANS</a> 
           <!--<li class="dropdown">
