@@ -32,6 +32,7 @@ else {}?>
     <link href="assets/css/tooltip-viewport.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/filtros.css" rel="stylesheet">
     <link href="assets/css/tooltip-viewport.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -49,6 +50,7 @@ else {}?>
     </script>
   </head>
    <body role="document">
+
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -96,6 +98,7 @@ else {}?>
       </div>
     </nav>
 
+    <!-- inicia Carousel-->
     <div class="container" role="main">
       <div id="mycarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -107,8 +110,8 @@ else {}?>
           </div>
         </div>
     </div>
+    <!-- Finaliza Carousel-->
           
-
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
@@ -116,64 +119,85 @@ else {}?>
         <p>Es una empresa con más de 40 años de experiencia en Logística, Aduana, Importaciones y Exportaciones 
            a nivel mundial somo su mejor aliado para su envío.</p>
       </div>
+      <!-- Finaliza Jumbotron-->
 
-      <div class="container"> 
-         <div class="row">
-             <div class="col-sm-4">     
+      <!-- inicia circle-->
+      <div class="container-fluid">  
+          <div class="row">
+             <div class="col-sm-4"><center>    
                   <img src="assets/img/EC.jpg"class="img-circle" alt="cinque terre" width="230" height="230">
              </div>
-             <div class="col-sm-4">     
+             <div class="col-sm-4"><center>        
                   <img src="assets/img/Cotizador.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
              </div> 
-             <div class="col-sm-4">     
-                  <img src="assets/img/Datos.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
+             <div class="col-sm-4"><center>        
+                  <img src="assets/img/Datos.jpg" class="img-circle " alt="cinque terre" width="230" height="230">  
              </div>  
+          </div> 
       </div>
-        
-  
-  <p></p>
+      <!-- finaliza circle-->
+      
+  <!-- Menu Servicios--> 
   <div class="container">
   <h1>Servicios</h1>
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home"><h2>Maritimo</h2></a></li>
-    <li><a data-toggle="tab" href="#menu1"><h2>Aereo</h2></a></li>
-    <li><a data-toggle="tab" href="#menu2"><h2>Terrestre</h2></a></li>
-    <li><a data-toggle="tab" href="#menu3"><h2>Aduana</h2></a></li>
+    <!-- Inicia Span-->
+    <li class="active"><a data-toggle="tab" href="#home"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/barco2.png" width="75" height="75" ></span><h2><span class="hidden-xs">Maritimo</span></h2></a></li>
+    <li><a data-toggle="tab" href="#menu1"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/glyphicons-39-airplane.png" width="75" height="75" ></span><h2><span class="hidden-xs">Aereo</span></h2></a></li>
+    <li><a data-toggle="tab" href="#menu2"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/camion2.png" width="75" height="75" ></span><h2><span class="hidden-xs">Terrestre</span></h2></a></li>
+    <li><a data-toggle="tab" href="#menu3"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/aduana.png" width="75" height="75" ></span><h2><span class="hidden-xs">Aduana</span></h2></a></li>
+    <!-- Finaliza Span-->
   </ul>
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <p></p>
-      <img src="assets/img/barco2.png" width="75" height="75" >
-      <h2>Importaciones maritimos desde cualquier parte del mundo contamos con la mejor experiencia en transportes vÃ­a maritima.</h2>
+      <h2>Importaciones maritimos desde cualquier parte del mundo contamos con la mejor experiencia en transportes vía maritima.</h2>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <p></p>
-      <img src="assets/img/avion2.png" width="75" height="75" >
-      <h2>Somos la mejor opciÃ³n en transporte Ã¡ereo en cualquier parte del mundo.</h2>
+      <h2>Somos la mejor opción en transporte áereo en cualquier parte del mundo.</h2>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <p></p>
-      <img src="assets/img/camion2.png" width="75" height="75" >
-      <h2>Hacer la logisticas vÃ­a terretres todo centroamerica es nuestro compromiso.</h2>
+      <h2>Hacer la logisticas vía terretres todo centroamerica es nuestro compromiso.</h2>
     </div>
     <div id="menu3" class="tab-pane fade">
-      <p></p>
-      <img src="assets/img/aduana.png" width="75" height="75" >
       <h2>No importa desde donde venga su mercaderia las fontreras no son barreras para llegar hasta su destino lo que importe o exporte.</h2>
     </div>
- </div>
+  </div>
+  <!-- Finaliza Servicios-->
+      
 
-<p></p>
+     <!-- Inicia Galeria-->
+    <div id="image-container">
+      <h1>Galeria</h1>
+        <p></p> 
+        <div class="img" id="img-2">
+          <div class="mask"></div>
+          <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
+        </div>
+        <p></p>
+        <div class="img" id="img-2">
+          <div class="mask"></div>
+          <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
+        </div>
+        <p></p>
+        <div class="img" id="img-2">
+          <div class="mask"></div>
+          <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
+        </div>
+        <p></p>
+        <div class="clearfix"></div>
+    </div>
+    <!-- finaliza Galeria-->
 
-      <div class="page-header">
-         <h1>Thumbnails</h1>
-          <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
-      </div>
+          
+    
+ 
 
       <div class="page-header">
         <h1>Alerts</h1>
       </div>
+
+      <p></p>
       <div class="alert alert-success" role="alert">
         <strong>Well done!</strong> You successfully read this important alert message.
       </div>
@@ -181,11 +205,12 @@ else {}?>
       <div class="page-header">
           <h1>Progress bars</h1>
         <div class="progress">
-           <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+           <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div> 
            <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
            <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
        </div>
       </div> 
+
 
     <!-- fin container -->
     <!-- Bootstrap core JavaScript
