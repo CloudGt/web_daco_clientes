@@ -49,7 +49,7 @@ else {}?>
       });
     </script>
   </head>
-   <body role="document">
+ <body role="document">
 
 
     <!-- Fixed navbar -->
@@ -125,7 +125,7 @@ else {}?>
       <div class="container-fluid">  
           <div class="row">
              <div class="col-sm-4"><center>    
-                  <img src="assets/img/EC.jpg"class="img-circle" alt="cinque terre" width="230" height="230">
+                  <a href= "estado_cuenta.php"><img src="assets/img/EC.jpg"class="img-circle" alt="cinque terre" width="230" height="230"></a>
              </div>
              <div class="col-sm-4"><center>        
                   <img src="assets/img/Cotizador.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
@@ -142,10 +142,10 @@ else {}?>
   <h1>Servicios</h1>
   <ul class="nav nav-tabs">
     <!-- Inicia Span-->
-    <li class="active"><a data-toggle="tab" href="#home"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/barco2.png" width="75" height="75" ></span><h2><span class="hidden-xs">Maritimo</span></h2></a></li>
-    <li><a data-toggle="tab" href="#menu1"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/glyphicons-39-airplane.png" width="75" height="75" ></span><h2><span class="hidden-xs">Aereo</span></h2></a></li>
-    <li><a data-toggle="tab" href="#menu2"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/camion2.png" width="75" height="75" ></span><h2><span class="hidden-xs">Terrestre</span></h2></a></li>
-    <li><a data-toggle="tab" href="#menu3"><span class="visible-xs visible-lg visible-md visible-sm" ><img src="assets/img/aduana.png" width="75" height="75" ></span><h2><span class="hidden-xs">Aduana</span></h2></a></li>
+    <li class="active"><a data-toggle="tab" href="#home"><img src="assets/img/barco2.png" width="32" height="20" ><span class="hidden-xs"> MARITIMO</a></li></span>
+    <li><a data-toggle="tab" href="#home"><img src="assets/img/avion2.png" width="32" height="20" ><span class="hidden-xs">   AEREO</a></li></span>
+    <li><a data-toggle="tab" href="#home"><img src="assets/img/camion2.png" width="32" height="20" ><span class="hidden-xs">  TERRESTRE</a></li></span>
+    <li><a data-toggle="tab" href="#home"><img src="assets/img/aduana.png" width="32" height="20" ><span class="hidden-xs">   ADUANA</a></li></span>
     <!-- Finaliza Span-->
   </ul>
 
@@ -177,12 +177,12 @@ else {}?>
         <p></p>
         <div class="img" id="img-2">
           <div class="mask"></div>
-          <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
+          <img src="assets/img/camion_daco2.JPG" width="480" height="375"  >
         </div>
         <p></p>
         <div class="img" id="img-2">
           <div class="mask"></div>
-          <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
+          <img src="assets/img/camion_daco3.JPG" width="480" height="375"  >
         </div>
         <p></p>
         <div class="clearfix"></div>
