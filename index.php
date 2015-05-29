@@ -49,7 +49,7 @@ else {}?>
       });
     </script>
   </head>
- <body role="document">
+   <body role="document">
 
 
     <!-- Fixed navbar -->
@@ -110,6 +110,7 @@ else {}?>
           </div>
         </div>
     </div>
+    <hr>
     <!-- Finaliza Carousel-->
           
 
@@ -124,22 +125,21 @@ else {}?>
       <!-- inicia circle-->
       <div class="container-fluid">  
           <div class="row">
-             <div class="col-sm-4"><center>    
-                  <a href= "estado_cuenta.php"><img src="assets/img/EC.jpg"class="img-circle" alt="cinque terre" width="230" height="230"></a>
+             <div class="col-sm-4"><center><br>    
+                  <a href= "estado_cuenta.php"><img src="assets/img/EC.png"class="img-circle" alt="cinque terre" width="230" height="230"></a>
              </div>
-             <div class="col-sm-4"><center>        
-                  <img src="assets/img/Cotizador.jpg" class="img-circle" alt="cinque terre" width="230" height="230"> 
-             </div> 
-             <div class="col-sm-4"><center>        
-                  <img src="assets/img/Datos.jpg" class="img-circle " alt="cinque terre" width="230" height="230">  
-             </div>  
+           
+             <div class="col-sm-4"><center><br>        
+                  <img src="assets/img/Cotizador.png" class="img-circle" alt="cinque terre" width="230" height="230">
+             </div>
+
+             <div class="col-sm-4"><center><br>        
+                  <img src="assets/img/Datos.png" class="img-circle " alt="cinque terre" width="230" height="230" > 
+             </div>            
           </div> 
       </div>
       <!-- finaliza circle-->
-
-
-
-
+      
 
 <!-- filter modal -->
 <script language='JavaScript'>
@@ -260,15 +260,20 @@ else {}?>
 
 
   <button class='btn btn-xs btn-important' data-target='#cotizador_modal' data-toggle='modal' onclick="payments_click()">Financing/Calculate Payments</button>
+
+
+      
   <!-- Menu Servicios--> 
+  
+  <hr>
   <div class="container">
   <h1>Servicios</h1>
   <ul class="nav nav-tabs">
     <!-- Inicia Span-->
-    <li class="active"><a data-toggle="tab" href="#home"><img src="assets/img/barco2.png" width="32" height="20" ><span class="hidden-xs"> MARITIMO</a></li></span>
-    <li><a data-toggle="tab" href="#home"><img src="assets/img/avion2.png" width="32" height="20" ><span class="hidden-xs">   AEREO</a></li></span>
-    <li><a data-toggle="tab" href="#home"><img src="assets/img/camion2.png" width="32" height="20" ><span class="hidden-xs">  TERRESTRE</a></li></span>
-    <li><a data-toggle="tab" href="#home"><img src="assets/img/aduana.png" width="32" height="20" ><span class="hidden-xs">   ADUANA</a></li></span>
+    <li class="active"><a data-toggle="tab" href="#home"><img src="assets/img/Barco.png" width="32" height="32" ><span class="hidden-xs"> MARITIMO</a></li></span>
+    <li><a data-toggle="tab" href="#menu1"><img src="assets/img/Avion.png" width="32" height="32" ><span class="hidden-xs">   AEREO</a></li></span>
+    <li><a data-toggle="tab" href="#menu2"><img src="assets/img/Camion.png" width="32" height="32" ><span class="hidden-xs"> TERRESTRE</a></li></span>
+    <li><a data-toggle="tab" href="#menu3"><img src="assets/img/aduana.png" width="32" height="32" ><span class="hidden-xs">   ADUANA</a></li></span>
     <!-- Finaliza Span-->
   </ul>
 
@@ -286,35 +291,35 @@ else {}?>
       <h2>No importa desde donde venga su mercaderia las fontreras no son barreras para llegar hasta su destino lo que importe o exporte.</h2>
     </div>
   </div>
+  <hr>
   <!-- Finaliza Servicios-->
       
 
      <!-- Inicia Galeria-->
+    <p></p>
     <div id="image-container">
       <h1>Galeria</h1>
         <p></p> 
         <div class="img" id="img-2">
-          <div class="mask"></div>
+          <span class="mask visible-sm visible-lg visible-md"></span>
           <img src="assets/img/camion_daco.JPG" width="480" height="375"  >
         </div>
         <p></p>
         <div class="img" id="img-2">
-          <div class="mask"></div>
+          <!--<div class="mask"></div>-->
+          <span class="mask visible-sm visible-lg visible-md"></span>
           <img src="assets/img/camion_daco2.JPG" width="480" height="375"  >
         </div>
         <p></p>
         <div class="img" id="img-2">
-          <div class="mask"></div>
+          <span class="mask visible-sm visible-lg visible-md"></span>
           <img src="assets/img/camion_daco3.JPG" width="480" height="375"  >
         </div>
         <p></p>
         <div class="clearfix"></div>
     </div>
     <!-- finaliza Galeria-->
-
-          
     
- 
 
       <div class="page-header">
         <h1>Alerts</h1>
@@ -333,8 +338,10 @@ else {}?>
            <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
        </div>
       </div> 
+      <hr>
 
 
+      
     <!-- fin container -->
     <!-- Bootstrap core JavaScript
       ================================================== -->

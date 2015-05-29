@@ -1,3 +1,4 @@
+
 <!-- filter modal -->
 <script language='JavaScript'>
  function showpay() {
@@ -39,14 +40,14 @@
         <!--  form calculadora -->
         <form class='form-horizontal' id='payments_calculator' name='cotizacion' role='form'>
           <div class='form-group'>
-            <label class='col-sm-3 control-label' for='price'>Vehicle Price:</label>
+            <label class='col-sm-3 control-label' for='price'>Origen:</label>
             <div class='col-sm-8 input-group'>
               <span class='input-group-addon'>$</span>
-              <input class='form-control' id='price' name='price' placeholder='Price' type='text' value='{{ vehicle.price }}'>
+              <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''>
             </div>
           </div>
           <div class='form-group'>
-            <label class='col-sm-3 control-label' for='down_payment'>Down Payment:</label>
+            <label class='col-sm-3 control-label' for='down_payment'>Destino:</label>
             <div class='col-sm-8 input-group'>
               <span class='input-group-addon'>$</span>
               <input class='form-control' id='down_payment' name='down_payment' type='text'>
@@ -103,3 +104,17 @@
   <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button class='btn btn-xs btn-important' data-target='#cotizador_modal' data-toggle='modal' onclick="payments_click()">Financing/Calculate Payments</button>
