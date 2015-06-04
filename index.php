@@ -10,6 +10,8 @@ else {}?>
   {
     echo "<div class='alert alert-danger' role='alert'> <strong> :s ! </strong>" .  $_SESSION['message'] . " </div>";
   } 
+  include("includes/paises.php");
+  
 ?>
   
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -215,6 +217,7 @@ else {}?>
               <input class='form-control' id='rate' name='rate' type='text' value='3.9'>
               <span class='input-group-addon'>%</span>
             </div>
+
           </div>
           <div class='form-group'>
             <label class='col-sm-3 control-label' for='months'>Term:</label>

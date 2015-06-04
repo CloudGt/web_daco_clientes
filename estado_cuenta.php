@@ -3,7 +3,7 @@
 <?php session_start();?>
 <?php session_set_save_handler(); ?>
 <?php require_once("includes/connection.php"); ?>
-<?php require_once("includes/connection.php"); ?>
+
 
 <?php
 if (isset($_SESSION["nombre_de_sesion"])) 
