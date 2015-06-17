@@ -19,27 +19,30 @@ if (isset($_SESSION["nombre_de_sesion"]))
         //include("includes/header_index.php");  
         while ($row = mysqli_fetch_assoc($query)) 
         {    
-            //$row['nombre'] = mb_convert_encoding($row['nombre'], 'UTF-8', mysqli_character_set_name($con));          
-            $pais = new pais($row['idpaises'], $row['nombre']);
+            $row['pais'] = mb_convert_encoding($row['pais'], 'UTF-8', mysqli_character_set_name($con));          
+            $pais = new pais($row['Idpaises'], $row['codigo'],$row['pais']);
             array_push($paises, $pais);           
         }
         $json_string = json_encode($paises);
-        $file = 'paises.json';
+        $file = 'data/paises3.json';
         file_put_contents($file, $json_string);
     }
     else 
     {
-        $message = "No hay registros ";
+        $message = 'No hay registros ';
         }
     } 
 }
     class pais {
-        public $id;
-        public $nombre;
+        public $Idpaises;
+        public $codigo;
+        public $pais;
 
-        function __construct($id, $nombre) {
-            $this->id = $id;
-            $this->nombre = $nombre;
+        function __construct($Idpaises, $codigo, $pais) {
+            $this->Idpaises = $Idpaises;
+            $this->codigo = $codigo;
+            $this->pais = $pais;
+
         }
     }
 ?>
