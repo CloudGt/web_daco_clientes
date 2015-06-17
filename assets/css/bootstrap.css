@@ -6582,3 +6582,32 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/**********************************/
+.img{
+        float:left;
+        -webkit-transition-duration: 0.5s;
+        }
+.img img{
+        padding:10px;
+        border:1px solid #fff;
+}
+.img:hover{
+       -webkit-transform:scale(0.8);
+       -webkit-box-shadow:0px 0px 30px #ccc;
+}   
+.img .mask{
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        height: 100%; 
+        opacity:0.6;
+        cursor:pointer;
+        -webkit-transition-duration: 0.5s;
+}
+#img-6:hover .mask{
+    margin-left:219px;
+    margin-top:135px;
+    height:0%;
+    width:0%;
+    -webkit-transform: rotateZ(750deg);
+}
