@@ -60,20 +60,23 @@ $datos_pais = file_get_contents('data/paises.json');
 $array_pais = json_decode($datos_pais, false);
 //print_r($array_pais);
  //echo '<html> 
+         echo' <div class="form-group">
+            <label class="col-sm-3 control-label" for="orign">Origen</label>
+            <div class="col-sm-8 input-group">
+              <span class="input-group-addon">-></span>
+              <select class="form-control" id="pais_origen" name="pais_origen">
+                <option value="">Seleccione pais</option> ';
+                    foreach ($array_pais as $obj) {
+                        $Idpaises= $obj-> Idpaises;
+                        $codigo= $obj-> codigo;
+                        $pais= $obj->  pais;
+                        echo '<option value='. $Idpaises .'>'.$pais.'</option>'; 
+                        }
+                echo '</select>'
 
-echo '<select class="form-control" id="pais_destino" name="pais_destino">
-    <option value="">Seleccione pais</option> ';
-foreach ($array_pais as $obj) {
-    //$x = $x+1;
-    $Idpaises= $obj-> Idpaises;
-    $codigo= $obj-> codigo;
-    $pais= $obj->  pais;
-   // echo $pais ."<br>";
-    //echo $Idpaises ."<br>";
-    //echo $dato[0]."<br>";
-    //echo $dato[1]."<br>";
-    echo '<option value='. $Idpaises .'>'.$pais.'</option>'; 
-}
-echo '</select>'
+                
+                echo '<input class="form-control" id="origen" name="orign" type="text" placeholder="Dirección de origen">
+            </div>
+          </div>   '
  
 ?>

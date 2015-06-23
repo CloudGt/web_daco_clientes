@@ -10,7 +10,7 @@ else {}?>
   {
     echo "<div class='alert alert-danger' role='alert'> <strong> :s ! </strong>" .  $_SESSION['message'] . " </div>";
   } 
-  include("includes/paises.php");
+ 
   
 ?>
   
@@ -18,7 +18,7 @@ else {}?>
 
 <html lang="es-Es" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    
+   
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@ else {}?>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>--Dacotrans</title>
+    <title>Dacotrans</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -45,6 +45,10 @@ else {}?>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   
+    <script src="assets/js/bootstrap-paginator.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();   
@@ -168,6 +172,32 @@ else {}?>
     document.cotizador.pay.value = result.toFixed(2);
   }
 }
+    function cambiar_direccion (incoterm) 
+    {
+        var input = document.getElementById ("txorigen");
+        var id_elemento = incoterm.selectedIndex;
+        var val = incoterm.options[id_elemento].value;
+        if (val == 1 || val== 2  )
+        {
+          
+          $("#txorigen").hide();
+          $("#txdestino").hide();
+           input.placeholder = "Dirección de recolección/puerto salida"; 
+        }
+        else{
+            if (val == 3 )
+            {
+              $("#txorigen").show();
+               $("#txdestino").show();
+               input.placeholder = "Puerto"; 
+            }
+            else{
+              
+            }  
+        }
+        
+    }
+
 </script>
 <div aria-hidden='true' aria-labelledby='calculatorModalLabel' class='modal fade' id='cotizador_modal' role='dialog' tabindex='-1'>
   <div class='modal-dialog'>
@@ -184,63 +214,110 @@ else {}?>
         <!--  form calculadora -->
         <form class='form-horizontal' id='payments_calculator' name='cotizacion' role='form'>
           <div class='form-group'>
-            <label class='col-sm-3 control-label' for='price'>Origen:</label>
+            <label class='col-sm-3 control-label' for='moneda'>Moneda:</label>
             <div class='col-sm-8 input-group'>
               <span class='input-group-addon'>$</span>
-              <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''>
+             <!-- <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''> -->
+              <select class="form-control" id="moneda" name="moneda">
+                <option value="">Seleccione moneda</option>
+                <option value="1">Quetzal</option>
+                <option value="2">Dolar</option>
+                <option value="3">Euro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label class='col-sm-3 control-label' for='moneda'>Incoterms:</label>
+            <div class='col-sm-8 input-group'>
+              <span class='input-group-addon glyphicon glyphicon-road'></span>
+             <!-- <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''> -->
+              <select class="form-control" id="incoterm" name="incoterm" onchange="cambiar_direccion(this)">
+                <option value="">Seleccione Incoterm</option>
+                <option value="1">EXW</option>
+                <option value="2">FCA</option>
+                <option value="3">FOB</option>
+                <option value="4">CIF</option>
+                <option value="5">DDU</option>
+              </select>
+            </div>
+          </div>
+
+            <h3>Información de carga</h3>
+
+
+          <div class='form-group'>
+            <label class='col-sm-3 control-label' for='origen'>Origen</label>
+            <div class='col-sm-8 input-group'>
+              <span class='input-group-addon'>-></span>
+             <!-- <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''> -->
+               <?php
+                  $datos_pais = file_get_contents('data/paises.json');
+                  $array_pais = json_decode($datos_pais, false);
+                  echo '<select class="form-control" id="origen" name="origen">
+                      <option value="">Seleccione pais</option> ';
+                  foreach ($array_pais as $obj) {
+                      $Idpaises= $obj-> Idpaises;
+                      $codigo= $obj-> codigo;
+                      $pais= $obj->  pais;
+                      echo '<option value='. $Idpaises .'>'.$pais.'</option>'; 
+                  }
+                  echo '</select>'
+                  ?>
+
+                <input class='form-control' id='txorigen' name='txorigen' type='text' placeholder="Dirección de origen">
             </div>
           </div>
           <div class='form-group'>
-            <label class='col-sm-3 control-label' for='down_payment'>Destino:</label>
+            <label class='col-sm-3 control-label' for='destino'>Destino</label>
             <div class='col-sm-8 input-group'>
-              <span class='input-group-addon'>$</span>
-              <input class='form-control' id='down_payment' name='down_payment' type='text'>
+              <span class='input-group-addon'>-></span>
+             <!-- <input class='form-control' id='price' name='price' placeholder='Price' type='text' value=''> -->
+               <?php
+                  $datos_pais = file_get_contents('data/paises.json');
+                  $array_pais = json_decode($datos_pais, false);
+                  echo '<select class="form-control" id="destino" name="destino">
+                      <option value="">Seleccione pais</option> ';
+                  foreach ($array_pais as $obj) {
+                      $Idpaises= $obj-> Idpaises;
+                      $codigo= $obj-> codigo;
+                      $pais= $obj->  pais;
+                      echo '<option value='. $Idpaises .'>'.$pais.'</option>'; 
+                  }
+                  echo '</select>'
+                  ?>
+
+                <input class='form-control' id='txdestino' name='txdestino' type='text' placeholder="Dirección de destino" >
             </div>
           </div>
+           
+       
           <div class='form-group'>
-            <label class='col-sm-3 control-label' for='trade_in_value'>Trade-In Value:</label>
-            <div class='col-sm-8 input-group'>
-              <span class='input-group-addon'>$</span>
-              <input class='form-control' id='trade_in_value' name='trade_in_value' type='text'>
-            </div>
-          </div>
-          <div class='form-group'>
-            <label class='col-sm-3 control-label' for='sales_tax'>Sales Tax:</label>
+            <label class='col-sm-3 control-label' for='sales_tax'>Equipo:</label>
             <div class='col-sm-8 input-group'>
               <input class='form-control' id='sales_tax' name='sales_tax' type='text'>
               <span class='input-group-addon'>%</span>
             </div>
           </div>
-          <div class='form-group'>
-            <label class='col-sm-3 control-label' for='rate'>Interest Rate (APR):</label>
-            <div class='col-sm-8 input-group'>
-              <input class='form-control' id='rate' name='rate' type='text' value='3.9'>
-              <span class='input-group-addon'>%</span>
-            </div>
-
-          </div>
-          <div class='form-group'>
-            <label class='col-sm-3 control-label' for='months'>Term:</label>
-            <div class='col-sm-8 input-group'>
-              <input class='form-control' id='months' name='months' type='text' value='36'>
-              <span class='input-group-addon'>months</span>
-            </div>
-          </div>
-          <div class='form-group'>
-            <label class='col-sm-3 control-label' for='pay'>Monthly Payment:</label>
-            <div class='col-sm-8 input-group'>
-              <span class='input-group-addon'>$</span>
-              <input class='form-control' id='pay' name='pay' readonly='readonly' type='text'>
-            </div>
-          </div>
+         
+          
+          
         </form>
       </div>
       <!-- /.modal-body -->
       <div class='modal-footer'>
-        <button class='btn btn-default' data-dismiss='modal' type='button'>Close</button>
-        <button class='btn btn-callOA btn-lg' onclick='showpay()' type='button'>
-        Calculate <span class='glyphicon glyphicon-refresh'></span>
-        </button>
+        <div id ="asistente_coti">
+          <script type='text/javascript'>
+          var options = {
+            currentPage: 1,
+            totalPages: 5
+            }
+            $('#asistente_coti').bootstrapPaginator(options);
+          </script>
+
+        </div>
+        
+        <!-- <button class='btn btn-default' data-dismiss='modal' type='button'>Siguiente</button></button>-->
       </div>
     <!-- footer -->
     </div>
